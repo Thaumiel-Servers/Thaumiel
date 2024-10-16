@@ -11,6 +11,7 @@
     <title>History - Thaumiel</title>
     <link rel="icon" type="image/png" href="./favicon.png">
 </head> <!--Button names and redirects-->
+<script async src="https://atlantic-dark-risk.glitch.me/APIHandler.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8FQLDNPJ6"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,10 +20,7 @@
 
     gtag('config', 'G-S8FQLDNPJ6');
 </script>
-<a href="index.html">
     <button class="buttonbacktop">Back</button>
-</a>
-</a>
 <!--Button layouts, % of width. added buttons percentage must below 98.4% to not create a new line-->
 <style>
     body {
@@ -52,18 +50,47 @@
             width: 23.4%
         }
     }
+    .history {
+        max-width: 95%;
+    }
 </style>
+
 <body scroll="no" style="overflow: hidden">
 <div style="display: flex; align-items: center;" class="header-container">
     <h1 class="historytitle" style="color: DodgerBlue; display: flex; font-family: Oxanium;" ><b>Thaumiel History</b></h1>
 </div>
+</style>
 <div>
-<h2 class="history" style="font-family: Oxanium;">Founding of Thaumiel:</h2>
-<p class="history" style="font-family: Oxanium;">Thaumiel was founded on November 3rd, 2023. It was initially created to compete against the SCP: SL server, The Shy Guy One, before<br> its untimely end. Thaumiel has replaced The Shy Guy One, with many of its old players now on its Discord and playing on its SL server.</p>
+<details class="history">
+<summary style="font-family: Oxanium; font-size: 32px;"><b>Founding of Thaumiel.</b></summary>
+<p style="font-family: Oxanium;">Thaumiel was founded on November 3rd, 2023. It was initially created to compete against the SCP: SL server, The Shy Guy One, before its untimely end. Thaumiel has replaced The Shy Guy One, with many of its old players now on its Discord and playing on its SL server.</p>
+</details>
+<details class="history">
+    <summary style="font-family: Oxanium; font-size: 32px;"><b>Early History.</b></summary>
+    <p style="font-family: Oxanium;">WIP.</p>
+    </details>
+<details class="history">
+        <summary style="font-family: Oxanium; font-size: 32px;"><b>Recent History.</b></summary>
+        <li style="font-family: Oxanium;">Thaumiel Servers was renamed to Thaumiel. <br> <li>
+    </details>
 <p class="history" style="text-align: center; font-family: Oxanium;"></p>
 </div>
-<button id="theme-toggle">
-    <img class="theme-toggle" id="theme-icon" src="light.png" alt="Toggle Theme" height="75" width="75">
+<button class="buttonhide" id="theme-toggle" style="border: none; background: none; padding: 0; overflow: hidden;">
+    <img class="theme-toggle" id="theme-icon" src="light.png" alt="Toggle Theme" height="75" width="75" style="display: block;">
 </button>
 <script src="Javascript.js"></script>
+<script>
+    document.querySelector('.buttonbacktop').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+</script>
+<script>
+    function displayDate() {
+        const dateElement = document.getElementById("current-date");
+        const currentDate = new Date();
+        dateElement.textContent = currentDate.toLocaleDateString();
+    }
+
+    window.onload = displayDate;
+</script>
 </html>
